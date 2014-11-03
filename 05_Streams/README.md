@@ -39,8 +39,8 @@ website). However, this time we read the body of the request using streaming
 events. The HTTP request object is an input stream with the usual input stream
 events.
 
-In the function getBody(), we accumulate the body text using the 'data' event
-and, once the 'end' event arrives, we know we have the entire message body.
+In the function `getBody`, we accumulate the body text using the `data` event
+and, once the `end` event arrives, we know we have the entire message body.
 
 To run this, first start the node server:
 
