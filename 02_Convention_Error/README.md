@@ -2,7 +2,7 @@
 
 Having the error first in a callback is a convention. Node.js is 100% strict
 about this in its own interfaces, but it's a clear way to communicate failure in
-a asynchronous function. It's a friendly prompt to handle your error as the fist
+an asynchronous function. It's a friendly prompt to handle your error as the fist
 thing you do in your callback.
 
 ## File Move Example
@@ -15,9 +15,9 @@ fs.rename('/tmp/hello', '/tmp/world', function (err) {
 });
 ```
 
-The previous example shows the fs.rename callback has one a argument, an error.
+The previous example shows the `fs.rename` callback with one argument, an error.
 Though the error is thrown, you send an error to a log file, standard error, do
-nothing or whatever is makes sense for your application.
+nothing or whatever makes sense for your application.
 
 ## File Read Example
 
@@ -29,7 +29,7 @@ fs.readFile('/etc/no.such.file', function (err, data) {
 });
 ```
 
-Again, the fs module, but with readFile. Here, the error is only defined where
+Again, the fs module, but with `readFile`. Here, the error is only defined where
 the read failed.
 
 
