@@ -15,8 +15,8 @@ fs.readFile('/etc/no.such.file', function (err, data) {
 });
 ```
 
-Again, the readFile example with the callback as the last argument to the
-readFile function.
+Again, the `readFile` example with the callback as the last argument to the
+`readFile` function.
 
 ## Server Example
 
@@ -31,6 +31,6 @@ server.listen(8000, function() {
 });
 ```
 
-Here, we create a TCP echo server. In the createServer and the listen function,
-the callback is the last (and in the example, the only) paramater. 
+Here, we create a TCP echo server. In the `createServer` and the `listen` functions,
+the callback is the last (and in the example, the only) parameter. 
 
