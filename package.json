@@ -1,0 +1,29 @@
+{
+  "name": "Node20Min",
+  "version": "0.0.1",
+  "description": "A short code-focused introduction to Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdarg/Node20Min.git"
+  },
+  "keywords": [
+    "presentation",
+    "node",
+    "reference",
+    "tutorial"
+  ],
+  "author": "Edmond Meinfelder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stdarg/Node20Min/issues"
+  },
+  "homepage": "https://github.com/stdarg/Node20Min",
+  "dependencies": {
+    "async": "0.9.0",
+    "bluebird": "2.3.10"
+  }
+}
