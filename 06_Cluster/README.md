@@ -1,10 +1,10 @@
 # Cluster
 
-Because JavaScript is single-threaded, doesn't mean Node.js can't scale up to
+Just because JavaScript is single-threaded doesn't mean Node.js can't scale up to
 take advantage of your computer's multiple CPUs.
 
-Cluster is a simplified abstraction of Unix's fork/exec. Where a master process
-typically creates the workers and the listening socket, managed by the master,
+Cluster is a simplified abstraction of Unix's fork/exec. A master process
+typically creates the workers, and the listening socket, managed by the master,
 sends the received data to the workers.
 
 
