@@ -23,6 +23,6 @@ To test this server, type, from the command line:
         2. Return the text body with 'Hello World\n' (the HTTP status is
            implicitly 200).
 3. The `createServer` function returns a server object and we use that object to
-   invoke its listen function, instructing it to listen on port 1337 bound to
+   invoke its `listen` function, instructing it to listen on port 1337 bound to
    the localhost interface.
 
