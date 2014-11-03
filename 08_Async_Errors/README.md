@@ -47,5 +47,5 @@ d.run(function() {
 ```
 
 This is a simplified example of a domain error handler. Here, we create the
-domain and the, create an event listener that will listen for the 'error' event
+domain and the, create an event listener that will listen for the `error` event
 (only once), display the error and then exit with the error code '1'.
