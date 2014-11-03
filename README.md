@@ -26,3 +26,4 @@ The presentation has the following sections:
 * [Async Errors](https://github.com/stdarg/Node20Min/tree/master/08_Async_Errors) -
   An explanation of Node.js domains.
 
+Additionally, you can [view the slides](https://github.com/stdarg/Node20Min/blob/master/slides/NodeIn20Min.pdf) in PDF.
