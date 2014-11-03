@@ -33,10 +33,10 @@ Then, to "talk", you can use telnet at the command prompt:
 
     $ telnet localhost 3000
 
-How does it work? We call createServer with a connection listener callback.
+How does it work? We call `createServer` with a connection listener callback.
 After every client connect to the server a connected socket is the parameter to
-the callback. When we receive the socket, we set up and 'end' event to handle
-ungraceful disconnects and 'data' for input. Once we receive data, we forward
+the callback. When we receive the socket, we set up an `end` event to handle
+ungraceful disconnects and a `data` event for input. Once we receive data, we forward
 that input to every other socket connection.
 
 ## Hello World using UDP
@@ -63,8 +63,8 @@ setInterval(function() {
 }, 1000);
 ```
 
-The UDP example shows how an appilcation using UDP is neither client nor server.
-It's just a set of peers. Here, we create the UDP socket, handle 'message'
+The UDP example shows how an application using UDP is neither client nor server.
+It's just a set of peers. Here, we create the UDP socket, handle `message`
 (input) events, then bind the port to listen and, once bound, set the socket to
 broadcast.
 
