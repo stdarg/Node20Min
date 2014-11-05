@@ -3,10 +3,9 @@
 Just because JavaScript is single-threaded doesn't mean Node.js can't scale up to
 take advantage of your computer's multiple CPUs.
 
-Cluster is a simplified abstraction of Unix's fork/exec. A master process
-typically creates the workers, and the listening socket, managed by the master,
-sends the received data to the workers.
-
+Cluster is an elegant abstraction of the Unix fork/exec. A master process
+creates the workers, and the listening socket, managed by the master,
+sends the received responses to the workers.
 
 ## Hello World Using Cluster
 
@@ -30,18 +29,24 @@ if (cluster.isMaster) {
 ```
 
 This is the hello world example from the [http://nodejs.org](nodejs.org
-website). However, this time we read the body of the request using streaming
-events. The HTTP request object is an input stream with the usual input stream
-events.
+website) with cluster. To run the program:
 
-In the function getBody(), we accumulate the body text using the 'data' event
-and, once the 'end' event arrives, we know we have the entire message body.
+    $ node cluster.js
+    Worker 1 is now listening on port 8000
+    Worker 2 is now listening on port 8000
+    Worker 3 is now listening on port 8000
 
-To run this, first start the node server:
+To test the program from the command line:
 
-    $ node hello_world_stream.js
+    $ curl http://localhost:8000
+    Hello world from: 3
 
-Then, using curl, send a POST request with a body:
+## What's Happening?
 
-    $ curl -i -H "X-HTTP-Method-Override: PUT" -X POST -d "value":"30","type":"Tip 3","targetModule":"Target 3","version":0,"systemId":3,"active":true  http://localhost:1337/
+Each time, the program calls `cluster.fork()` node
+creates a child process. Additionally, there is the master process, which,
+if any child process listens on a socket, the master process listens and then
+dispatches the input to one of the children listening on the socket's port. The
+children respond by sending the output back to the master process which
+forwards it onto the socket in response.
 
